@@ -29,6 +29,9 @@ import { AngularFireDatabase, FirebaseObjectObservable } from 'angularfire2/data
 // for AngularFireAuth
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireAuth } from 'angularfire2/auth';
+import { ProductsProvider } from '../providers/products/products';
+import { HttpProvider } from '../providers/http/http';
+import { LoggedUserProvider } from '../providers/logged-user/logged-user';
 
 
 @NgModule({
@@ -76,7 +79,10 @@ import { AngularFireAuth } from 'angularfire2/auth';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    ProductsProvider,
+    HttpProvider,
+    LoggedUserProvider
   ]
 })
 export class AppModule {}
