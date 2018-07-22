@@ -67,26 +67,8 @@ export class HttpProvider {
     });
   }
 
-  generateQuery(
-    filterColumn,
-    filterValue,
-    orderColumn,
-    orderValue,
-    page,
-    limit
-  ) {
-    const search = filterValue !== "-" ? "search=" + filterValue : "";
-    const searchFields =
-      filterColumn !== "-" ? "&searchFields=" + filterColumn + ":like" : "";
-    const orderQuery =
-      orderColumn !== "-"
-        ? "&orderBy=" + orderColumn + "&sortedBy=" + orderValue
-        : "";
-    const paginate = page !== "-" ? "&limit=" + limit + "&page=" + page : "";
-    const queryString = "?" + search + searchFields + orderQuery + paginate;
-    return queryString;
-  }
-
+  
+  
   generateUrlStringForGet(test: string[]) {
     let testString = "";
     test.forEach(elem => {

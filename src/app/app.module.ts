@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, ErrorHandler } from '@angular/core';
+import { HttpModule } from '@angular/http';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
@@ -50,6 +51,7 @@ import { LoggedUserProvider } from '../providers/logged-user/logged-user';
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp({         //<----ENTER FIREBASE CREDENTIAL HERE
       apiKey: "AIzaSyBoxB6vtXSdv0CDaEGp5O4krv9d_98Pvns",

@@ -23,6 +23,8 @@ export class LoginPage {
               public sharedService: SharedService
              ) {
         this.authService.logout();
+        this.email='itsram7@gmail.com';
+        this.password='testing';
   }
 
   ionViewDidLoad() {

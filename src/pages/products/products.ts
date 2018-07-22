@@ -58,10 +58,10 @@ export class ProductsPage {
 
   getItems(): void {
     alert("Get Itmes");
-    return;
+    // return;
     this.productService.getProducts().subscribe(response => {
       console.log(response);
-    });
+   });
   }
 
   applyCategoryFilter(event): void {
